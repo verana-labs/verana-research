@@ -135,7 +135,7 @@ css = """
           --fline:#38362E; --fcard-bg:#1B1A15; --fcap:#B0AB9D; """ + FIGVARS_DARK + """ }
   * { margin:0; padding:0; box-sizing:border-box; }
   body { background:var(--bg); color:var(--ink); font-family:"Source Serif 4", Georgia, serif; font-size:16.5px; line-height:1.72; -webkit-font-smoothing:antialiased; }
-  main { max-width:720px; margin:0 auto; padding:64px 26px 100px; }
+  main { max-width:980px; margin:0 auto; padding:64px 30px 100px; }
   .logo { text-align:center; color:var(--accent); margin-bottom:16px; }
   .logo svg { display:inline-block; }
   .kicker-line { text-align:center; font-size:13px; letter-spacing:.28em; text-transform:uppercase; color:var(--faint); margin-bottom:26px; }
@@ -165,16 +165,15 @@ css = """
   .ref a { word-break:break-all; }
   .colophon { margin-top:30px; font-size:13.5px; color:var(--faint); font-style:italic; text-align:center; }
   .fig { margin:26px 0 30px; }
-  .fig--wide { width:min(94vw, 1000px); margin-left:50%; transform:translateX(-50%); }
+  .fig--wide { width:100%; }
   .fig--mid { max-width:640px; margin-left:auto; margin-right:auto; }
-  .figwrap { overflow-x:auto; border:1px solid var(--fline); border-radius:12px; background:var(--fcard-bg); padding:18px 14px 10px; }
-  .figsvg { width:100%; height:auto; display:block; min-width:700px; }
-  .fig--mid .figsvg { min-width:480px; }
+  .figwrap { border:1px solid var(--fline); border-radius:12px; background:var(--fcard-bg); padding:18px 14px 10px; }
+  .figsvg { width:100%; height:auto; display:block; }
   figcaption { font-size:13px; color:var(--fcap); margin-top:10px; line-height:1.5; text-align:center; }
   #themebtn { position:fixed; top:18px; right:18px; width:38px; height:38px; border-radius:50%; border:1px solid var(--line); background:var(--soft); color:var(--muted); cursor:pointer; z-index:5; }
   #themebtn:hover { color:var(--ink); border-color:var(--accent); }
   .ic-sun { display:none; } html.dark .ic-sun { display:inline; } html.dark .ic-moon { display:none; }
-  @media print { #themebtn { display:none; } body { background:#fff; color:#000; } .fig--wide { width:100%; margin-left:0; transform:none; } }
+  @media print { #themebtn { display:none; } body { background:#fff; color:#000; } }
 """
 
 page = """<!doctype html>

@@ -2,7 +2,7 @@
 
 *A comparative analysis of trust approaches for autonomous actors*
 
-**Fabrice Rochette** · The Verana Foundation · fabrice@verana.io
+**Fabrice Rochette** · The Verana Foundation
 **Ariel Gentile** · 2060 OÜ
 
 *Version 0.1 (draft for review) · September 2026 · License: CC BY 4.0*

@@ -5,7 +5,7 @@
 **Fabrice Rochette** · The Verana Foundation
 **Ariel Gentile** · 2060 OÜ
 
-*Version 0.1 (draft for review) · September 2026 · License: CC BY 4.0*
+*September 2026 · License: CC BY 4.0*
 
 *Companion paper to the talk "Why AI Agents Must Have Their Own Identity?", Eclipse Models for Privacy Interest Group webinar, September 17, 2026.*
 

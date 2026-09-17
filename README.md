@@ -12,7 +12,7 @@ Research, papers, talks and webinar materials from [The Verana Foundation](https
 ## Layout
 
 - `webinars/` — one folder per event: slide decks (self-contained HTML, open in a browser; N toggles speaker notes) and companion notes.
-- `papers/` — papers and long-form analyses (coming).
+- `papers/` — papers and long-form analyses: one folder per paper, Markdown source plus rendered HTML.
 
 ## References
 

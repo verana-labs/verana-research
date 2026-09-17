@@ -10,14 +10,12 @@ The talk argues that AI agents need their own verifiable identity, proving three
 
 | File | Description |
 |---|---|
-| [verana-verifiable-trust-eclipse-webinar-v4.html](verana-verifiable-trust-eclipse-webinar-v4.html) | **Latest cut** (17 slides): the causal "How It Works" arc: ecosystems, create or join, get accredited, attach publicly, verify before connecting, trust graph |
-| [verana-verifiable-trust-eclipse-webinar-v2.html](verana-verifiable-trust-eclipse-webinar-v2.html) | Illustrated version: diagram treatments of the answer, trap, one-layer, pillar and mechanism slides |
-| [verana-verifiable-trust-eclipse-webinar.html](verana-verifiable-trust-eclipse-webinar.html) | Text-first version of the deck |
+| [verana-verifiable-trust-eclipse-webinar-v4.html](https://verana-labs.github.io/verana-research/webinars/2026-09-17-eclipse-models-for-privacy/verana-verifiable-trust-eclipse-webinar-v4.html) | The slide deck (17 slides): the causal "How It Works" arc: ecosystems, create or join, get accredited, attach publicly, verify before connecting, trust graph |
 | [landscape.md](landscape.md) | Companion notes: the agent-identity landscape, one section per approach with pros, cons and how it relates to Verana |
 
-## Viewing the decks
+## Viewing the deck
 
-Open either HTML file in a browser. Keyboard: arrows / space to navigate, **N** speaker notes, **F** fullscreen, **D** dark/light theme, **#N** in the URL deep-links to slide N. Print to PDF renders one slide per page (16:9).
+The link above opens the slides directly in the browser. Keyboard: arrows / space to navigate, **N** speaker notes, **F** fullscreen, **D** dark/light theme, **#N** in the URL deep-links to slide N. Print to PDF renders one slide per page (16:9).
 
 ## Links
 

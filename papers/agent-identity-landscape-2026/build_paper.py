@@ -118,8 +118,8 @@ def insert_before(needle, fig):
     raise AssertionError(needle)
 
 insert_after("relocated one layer up.", FIG1)
-insert_before("Against the framework:", FIG3)
-insert_before("Against the framework:", FIG2)  # ends up before FIG3
+insert_before("Against the framework:", FIG2)
+insert_before("Against the framework:", FIG3)  # lands between FIG2 and the anchor
 
 article = "\n".join(body)
 assert "—" not in article, "em-dash in paper"

@@ -181,43 +181,6 @@
 <h3>6.2 The concept</h3>
 <p>Verifiable Trust [13] is an open, decentralized trust infrastructure whose mechanics unfold as a causal chain:</p>
 <ol><li><strong>Ecosystems define trust in their domain.</strong> A trust ecosystem is a community, a sector body, a government program, a company network, that publishes machine-readable governance: an Ecosystem Governance Framework anchored to the ecosystem's DID, credential schemas (the data model each credential must satisfy), and a participant tree recording who is accredited to issue and to verify each schema, with delegation and revocation in public.</li><li><strong>Anyone can create or join an ecosystem.</strong> Creation is permissionless; participation is a choice. Sector rules stay sector-owned on shared rails.</li><li><strong>Participants join to be accredited, or to hold credentials.</strong> A single identity can be an accredited issuer of one schema in one ecosystem, an accredited verifier of another schema in another, and a holder of credentials from a third.</li><li><strong>Proof is attached publicly to the identifier.</strong> Credentials and accreditations are linked to the DID itself, as verifiable presentations in or linked from the DID document. Resolving the identifier <em>is</em> seeing the proof: no account, no API gatekeeper, the same attachment serving MCP, A2A, DIDComm, and plain HTTPS.</li><li><strong>Peers verify each other before connecting.</strong> Proof-of-Trust is mutual: each peer resolves the other's DID and presentations, verifies signatures and schemas locally, and checks the other's issuers and verifiers against the ecosystem's public, replicated registry state. The connection proceeds only if the applicable governance rules pass on both sides; private credentials, if any, are exchanged only afterward, over the established channel. Every input is public or presented by the peers themselves; no issuer is called, no status beacon fired, no third party learns the check happened.</li><li><strong>Public proof is searchable proof.</strong> Because attachment is public, the network is indexable: one queryable graph of identifiers, accreditations, and ecosystems, in which services and agents are found by the credentials they hold and by who accredited them, ranked by verifiable trust signals rather than by advertising or search-engine optimization.</li></ol>
-<figure class="fig fig--wide"><div class="figwrap"><svg viewBox="0 0 1112 336" role="img" aria-label="Mutual trust resolution between two peers, which can be user agents, services, AI agents or IoT devices: both resolve each other's DIDs and credentials, verify locally, check the other's accreditations against public registry data, then connect; no issuer or broker learns of the checks" class="figsvg">
-      <defs>
-        <marker id="sq-a" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L8 4 L0 8 z" fill="var(--muted)"/></marker>
-        <marker id="sq-g" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 0 L8 4 L0 8 z" fill="var(--green)"/></marker>
-      </defs>
-      <rect x="60" y="4" width="240" height="36" rx="9" fill="var(--card)" stroke="var(--line)"/>
-      <text x="180" y="27" text-anchor="middle" font-family="'Space Grotesk'" font-weight="600" font-size="13.5" fill="var(--ink)">Peer A</text>
-      <rect x="436" y="4" width="240" height="36" rx="9" fill="var(--card)" stroke="var(--line)"/>
-      <text x="556" y="27" text-anchor="middle" font-family="'Space Grotesk'" font-weight="600" font-size="13.5" fill="var(--ink)">Public registry · read-only</text>
-      <rect x="812" y="4" width="240" height="36" rx="9" fill="var(--card)" stroke="var(--line)"/>
-      <text x="932" y="27" text-anchor="middle" font-family="'Space Grotesk'" font-weight="600" font-size="13.5" fill="var(--ink)">Peer B</text>
-      <line x1="180" y1="40" x2="180" y2="300" stroke="var(--line)" stroke-dasharray="4 5"/>
-      <line x1="556" y1="40" x2="556" y2="300" stroke="var(--line)" stroke-dasharray="4 5"/>
-      <line x1="932" y1="40" x2="932" y2="300" stroke="var(--line)" stroke-dasharray="4 5"/>
-      <text x="556" y="58" text-anchor="middle" font-size="12" fill="var(--faint)" font-family="InterD">a peer can be a user agent, an online service, an AI agent, an IoT device</text>
-      <text x="556" y="78" text-anchor="middle" font-family="PlexMono" font-size="12" fill="var(--muted)">1 · RESOLVE EACH OTHER'S DIDS + LINKED PRESENTATIONS</text>
-      <line x1="186" y1="88" x2="926" y2="88" stroke="var(--muted)" stroke-width="1.3" marker-start="url(#sq-a)" marker-end="url(#sq-a)"/>
-      <text x="556" y="110" text-anchor="middle" font-family="PlexMono" font-size="12" fill="var(--muted)">2 · BOTH VERIFY LOCALLY · SIGNATURES + SCHEMAS</text>
-      <path d="M180 124 h60 v20 h-54" fill="none" stroke="var(--muted)" stroke-width="1.3" marker-end="url(#sq-a)"/>
-      <path d="M932 124 h-60 v20 h54" fill="none" stroke="var(--muted)" stroke-width="1.3" marker-end="url(#sq-a)"/>
-      <text x="556" y="170" text-anchor="middle" font-family="PlexMono" font-size="12" fill="var(--muted)">3 · EACH CHECKS THE OTHER'S ISSUERS + VERIFIERS ARE ACCREDITED</text>
-      <line x1="180" y1="180" x2="550" y2="180" stroke="var(--muted)" stroke-width="1.3" marker-end="url(#sq-a)"/>
-      <line x1="932" y1="180" x2="562" y2="180" stroke="var(--muted)" stroke-width="1.3" marker-end="url(#sq-a)"/>
-      <line x1="550" y1="204" x2="186" y2="204" stroke="var(--muted)" stroke-width="1.1" stroke-dasharray="5 4" marker-end="url(#sq-a)"/>
-      <line x1="562" y1="204" x2="926" y2="204" stroke="var(--muted)" stroke-width="1.1" stroke-dasharray="5 4" marker-end="url(#sq-a)"/>
-      <text x="556" y="222" text-anchor="middle" font-family="PlexMono" font-size="12" fill="var(--faint)">PUBLIC STATE · CACHEABLE</text>
-      <text x="556" y="246" text-anchor="middle" font-family="PlexMono" font-size="12" fill="var(--green)">4 · CONNECT · RULES PASSED ON BOTH SIDES</text>
-      <line x1="186" y1="256" x2="926" y2="256" stroke="var(--green)" stroke-width="1.8" marker-start="url(#sq-g)" marker-end="url(#sq-g)"/>
-      <text x="556" y="282" text-anchor="middle" font-family="PlexMono" font-size="12" fill="var(--faint)">5 · OPTIONAL · PRIVATE CREDENTIALS OVER THE ESTABLISHED CONNECTION</text>
-      <line x1="186" y1="292" x2="926" y2="292" stroke="var(--green)" stroke-width="1.2" stroke-dasharray="6 5" marker-start="url(#sq-g)" marker-end="url(#sq-g)"/>
-      <circle cx="300" cy="322" r="11" fill="none" stroke="var(--ember)" stroke-width="1.5"/>
-      <ellipse cx="300" cy="322" rx="6.5" ry="3.8" fill="none" stroke="var(--ember)" stroke-width="1.2"/>
-      <line x1="291" y1="331" x2="309" y2="313" stroke="var(--ember)" stroke-width="1.6"/>
-      <text x="322" y="319" font-family="PlexMono" font-size="12" fill="var(--ember)">NO CALL HOME, NO BEACON:</text>
-      <text x="322" y="333" font-size="12" fill="var(--muted)" font-family="InterD">no issuer or broker learns these checks ever happened</text>
-      <text x="1016" y="326" text-anchor="end" font-size="12" fill="var(--faint)" font-family="InterD">otherwise the connection never starts</text>
-    </svg></div><figcaption><strong>Figure 3.</strong> Mutual trust resolution: both peers resolve each other, verify locally, check accreditations against public replicated state, then connect; optional private credentials flow only over the established channel.</figcaption></figure>
 <figure class="fig fig--mid"><div class="figwrap"><svg viewBox="0 0 560 352" role="img" aria-label="Participant tree of a credential schema: the ecosystem root accredits issuer and verifier grantors, who accredit issuers and verifiers; issuers issue credentials to holders and verifiers verify holders' credentials" class="figsvg">
         <rect x="0" y="2" width="560" height="84" rx="12" fill="var(--surface)" stroke="var(--line-soft)"/>
         <rect x="10" y="14" width="3" height="60" rx="1.5" fill="var(--purple)" opacity=".85"/>
@@ -289,6 +252,43 @@
         <text x="282" y="295" font-family="'Space Grotesk'" font-weight="600" font-size="13.5" fill="var(--ink)">Holder</text>
         <text x="282" y="312" font-size="12" fill="var(--faint)" font-family="InterD">human · service · AI agent · connected object</text>
       </svg></div><figcaption><strong>Figure 2.</strong> The participant tree of a credential schema: the ecosystem root accredits grantors, grantors accredit issuers and verifiers; issuers issue to, and verifiers verify, holders.</figcaption></figure>
+<figure class="fig fig--wide"><div class="figwrap"><svg viewBox="0 0 1112 336" role="img" aria-label="Mutual trust resolution between two peers, which can be user agents, services, AI agents or IoT devices: both resolve each other's DIDs and credentials, verify locally, check the other's accreditations against public registry data, then connect; no issuer or broker learns of the checks" class="figsvg">
+      <defs>
+        <marker id="sq-a" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L8 4 L0 8 z" fill="var(--muted)"/></marker>
+        <marker id="sq-g" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 0 L8 4 L0 8 z" fill="var(--green)"/></marker>
+      </defs>
+      <rect x="60" y="4" width="240" height="36" rx="9" fill="var(--card)" stroke="var(--line)"/>
+      <text x="180" y="27" text-anchor="middle" font-family="'Space Grotesk'" font-weight="600" font-size="13.5" fill="var(--ink)">Peer A</text>
+      <rect x="436" y="4" width="240" height="36" rx="9" fill="var(--card)" stroke="var(--line)"/>
+      <text x="556" y="27" text-anchor="middle" font-family="'Space Grotesk'" font-weight="600" font-size="13.5" fill="var(--ink)">Public registry · read-only</text>
+      <rect x="812" y="4" width="240" height="36" rx="9" fill="var(--card)" stroke="var(--line)"/>
+      <text x="932" y="27" text-anchor="middle" font-family="'Space Grotesk'" font-weight="600" font-size="13.5" fill="var(--ink)">Peer B</text>
+      <line x1="180" y1="40" x2="180" y2="300" stroke="var(--line)" stroke-dasharray="4 5"/>
+      <line x1="556" y1="40" x2="556" y2="300" stroke="var(--line)" stroke-dasharray="4 5"/>
+      <line x1="932" y1="40" x2="932" y2="300" stroke="var(--line)" stroke-dasharray="4 5"/>
+      <text x="556" y="58" text-anchor="middle" font-size="12" fill="var(--faint)" font-family="InterD">a peer can be a user agent, an online service, an AI agent, an IoT device</text>
+      <text x="556" y="78" text-anchor="middle" font-family="PlexMono" font-size="12" fill="var(--muted)">1 · RESOLVE EACH OTHER'S DIDS + LINKED PRESENTATIONS</text>
+      <line x1="186" y1="88" x2="926" y2="88" stroke="var(--muted)" stroke-width="1.3" marker-start="url(#sq-a)" marker-end="url(#sq-a)"/>
+      <text x="556" y="110" text-anchor="middle" font-family="PlexMono" font-size="12" fill="var(--muted)">2 · BOTH VERIFY LOCALLY · SIGNATURES + SCHEMAS</text>
+      <path d="M180 124 h60 v20 h-54" fill="none" stroke="var(--muted)" stroke-width="1.3" marker-end="url(#sq-a)"/>
+      <path d="M932 124 h-60 v20 h54" fill="none" stroke="var(--muted)" stroke-width="1.3" marker-end="url(#sq-a)"/>
+      <text x="556" y="170" text-anchor="middle" font-family="PlexMono" font-size="12" fill="var(--muted)">3 · EACH CHECKS THE OTHER'S ISSUERS + VERIFIERS ARE ACCREDITED</text>
+      <line x1="180" y1="180" x2="550" y2="180" stroke="var(--muted)" stroke-width="1.3" marker-end="url(#sq-a)"/>
+      <line x1="932" y1="180" x2="562" y2="180" stroke="var(--muted)" stroke-width="1.3" marker-end="url(#sq-a)"/>
+      <line x1="550" y1="204" x2="186" y2="204" stroke="var(--muted)" stroke-width="1.1" stroke-dasharray="5 4" marker-end="url(#sq-a)"/>
+      <line x1="562" y1="204" x2="926" y2="204" stroke="var(--muted)" stroke-width="1.1" stroke-dasharray="5 4" marker-end="url(#sq-a)"/>
+      <text x="556" y="222" text-anchor="middle" font-family="PlexMono" font-size="12" fill="var(--faint)">PUBLIC STATE · CACHEABLE</text>
+      <text x="556" y="246" text-anchor="middle" font-family="PlexMono" font-size="12" fill="var(--green)">4 · CONNECT · RULES PASSED ON BOTH SIDES</text>
+      <line x1="186" y1="256" x2="926" y2="256" stroke="var(--green)" stroke-width="1.8" marker-start="url(#sq-g)" marker-end="url(#sq-g)"/>
+      <text x="556" y="282" text-anchor="middle" font-family="PlexMono" font-size="12" fill="var(--faint)">5 · OPTIONAL · PRIVATE CREDENTIALS OVER THE ESTABLISHED CONNECTION</text>
+      <line x1="186" y1="292" x2="926" y2="292" stroke="var(--green)" stroke-width="1.2" stroke-dasharray="6 5" marker-start="url(#sq-g)" marker-end="url(#sq-g)"/>
+      <circle cx="300" cy="322" r="11" fill="none" stroke="var(--ember)" stroke-width="1.5"/>
+      <ellipse cx="300" cy="322" rx="6.5" ry="3.8" fill="none" stroke="var(--ember)" stroke-width="1.2"/>
+      <line x1="291" y1="331" x2="309" y2="313" stroke="var(--ember)" stroke-width="1.6"/>
+      <text x="322" y="319" font-family="PlexMono" font-size="12" fill="var(--ember)">NO CALL HOME, NO BEACON:</text>
+      <text x="322" y="333" font-size="12" fill="var(--muted)" font-family="InterD">no issuer or broker learns these checks ever happened</text>
+      <text x="1016" y="326" text-anchor="end" font-size="12" fill="var(--faint)" font-family="InterD">otherwise the connection never starts</text>
+    </svg></div><figcaption><strong>Figure 3.</strong> Mutual trust resolution: both peers resolve each other, verify locally, check accreditations against public replicated state, then connect; optional private credentials flow only over the established channel.</figcaption></figure>
 <p>Against the framework: C1 is a DID on any transport; C2 a credential chain to a legal entity, accountability rather than reputation; C3 ecosystem accreditations under public, auditable participant trees; C4 mutual, client-side resolution over public state.</p>
 <h3>6.3 Honest assessment</h3>
 <p>A comparison is credible only if the proposing side is examined by the same criteria, so we state where Verifiable Trust stands today. The network runs on a public testnet, with mainnet ahead; like any trust infrastructure, its value compounds with adoption, and the wallet integrations, reference ecosystems and use cases now running are the leading edge of that curve. The specifications are converging on their next major version; richer delegation and mandate semantics of the kind M-Trust describes (purpose, value limits, time windows, delegation depth, termination) are intentionally sequenced after it, and on this architecture they amount to an additional credential schema rather than a protocol change. A public ledger-based registry raises a fair and recurring question, "why a ledger?", to which the answer is precise: shared, replicated public state is what removes the operator-observer, and we know of no lighter construction that preserves criterion C4 at internet scale. Ecosystem governance asks real work of adopters, schemas and rules must be written: that is the cost of sector sovereignty, and reference ecosystems and tooling exist to reduce it. Finally, the infrastructure is stewarded by a non-profit foundation rather than a platform vendor: a deliberate design choice for neutral infrastructure, with the trade-offs in reach that this implies. These are the costs of satisfying the four criteria as we currently understand them; we state them so that the comparison of Section 4 can be audited rather than believed.</p>

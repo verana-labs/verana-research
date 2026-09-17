@@ -187,4 +187,4 @@ The agent identity landscape of 2026 is rich, serious, and partial. Enterprise I
 
 ---
 
-*© 2026 The Verana Foundation. Licensed under Creative Commons Attribution 4.0 International (CC BY 4.0). Comments and corrections: fabrice@verana.io.*
+*© 2026 The Verana Foundation. Licensed under Creative Commons Attribution 4.0 International (CC BY 4.0). Comments and corrections: https://github.com/verana-labs/verana-research.*

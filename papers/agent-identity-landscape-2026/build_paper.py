@@ -66,10 +66,10 @@ for b in blocks:
         subtitle = inline(first.strip("*")); continue
     if first.startswith("**Fabrice"):
         body.append('<p class="authors">' + "<br>".join(inline(l) for l in lines) + "</p>"); continue
-    if first.startswith("*Version") or first.startswith("*Companion"):
-        body.append('<p class="meta">' + "<br>".join(inline(l.strip("*")) for l in lines) + "</p>"); continue
     if first == "---":
         body.append("<hr>"); continue
+    if first.startswith("*") and "<hr>" not in body and not first.startswith("*©"):
+        body.append('<p class="meta">' + "<br>".join(inline(l.strip("*")) for l in lines) + "</p>"); continue
     if first.startswith("## "):
         h = first[3:].strip()
         if h == "References": in_refs = True

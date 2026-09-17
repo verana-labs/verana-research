@@ -7,7 +7,7 @@
 
 *September 2026 · License: CC BY 4.0*
 
-*Companion paper to the talk "[Why AI Agents Must Have Their Own Identity?](https://github.com/verana-labs/verana-research/tree/main/webinars/2026-09-17-eclipse-models-for-privacy)", Eclipse Models for Privacy Interest Group webinar, September 17, 2026.*
+*Companion paper to the talk "[Why AI Agents Must Have Their Own Identity?](https://github.com/verana-labs/verana-research/blob/main/webinars/2026-09-17-eclipse-models-for-privacy/verana-verifiable-trust-eclipse-webinar-v4.html)", Eclipse Models for Privacy Interest Group webinar, September 17, 2026.*
 
 ---
 

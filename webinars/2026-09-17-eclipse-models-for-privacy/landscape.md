@@ -110,7 +110,7 @@ Backup notes for the "Landscape" slide of the Eclipse Models for Privacy webinar
 - Operator binding is "registered with the network", under the scheme's private rules, not publicly verifiable governance.
 - Multiple competing protocols (TAP vs AP2 vs ACP) already fragment the silo internally.
 
-**Relation to Verana.** The strongest proof that sector players will build sectoral trust registries if no common layer exists. Bridge: a payments ecosystem on Verana could anchor the same mandates/schemas publicly; AP2's VC mandates could be issued/verified under ecosystem permissions.
+**Relation to Verana.** The strongest proof that sector players will build sectoral trust registries if no common layer exists. Bridge: a payments ecosystem on Verana could anchor the same mandates/schemas publicly; AP2's VC mandates could be issued/verified under ecosystem accreditations.
 
 ---
 
@@ -138,12 +138,12 @@ Backup notes for the "Landscape" slide of the Eclipse Models for Privacy webinar
 
 ## 7. Verana · Verifiable Trust (honest self-assessment)
 
-**What it is.** Open, decentralized trust infrastructure: trust ecosystems publish machine-readable governance (credential schemas, roles, issue/verify permissions) on a public Verifiable Public Registry; services and agents present DIDs + verifiable credentials binding them to accountable legal entities; peers run Proof-of-Trust client-side before data flows; the Trust Graph makes trust discoverable (API/MCP). Apache 2.0, live on testnet.
+**What it is.** Open, decentralized trust infrastructure: trust ecosystems publish machine-readable governance (credential schemas, roles, issuer/verifier accreditations) on a public Verifiable Public Registry; services and agents present DIDs + verifiable credentials binding them to accountable legal entities; peers run Proof-of-Trust client-side before data flows; the Trust Graph makes trust discoverable (API/MCP). Apache 2.0, live on testnet.
 
 **Pros (the four columns).**
 - Who it is: DID on any transport (HTTPS, MCP, A2A, DIDComm).
 - Who operates it: credential chain to a legal entity: accountability, not reputation.
-- What it may do: ecosystem accreditations under public, auditable permission trees.
+- What it may do: ecosystem accreditations under public, auditable participant trees.
 - No central observer: trust resolution is a local computation over public replicated state + peer-presented credentials; no call home, no beacon.
 - One layer for every actor type (wallet, service, IoT, org, agent) and every sector: differences live in models (schemas, roles, governance), not in parallel infrastructures.
 - Conformance-testable normative spec (ODC-Tester collaboration with Trialog).
@@ -151,7 +151,7 @@ Backup notes for the "Landscape" slide of the Eclipse Models for Privacy webinar
 **Cons (be honest, especially in this room).**
 - Early: testnet, not mainnet; adoption is the whole game and network effects are unproven.
 - Spec still evolving (v4 in delivery); rich delegation/mandate semantics (PoA-style) deliberately deferred until after v4, though they are only a credential schema away.
-- A public permissioned registry invites the "why a ledger?" objection: the answer (shared state without an operator-observer) must be made every time.
+- A public ledger-based registry invites the "why a ledger?" objection: the answer (shared state without an operator-observer) must be made every time.
 - Ecosystem governance is powerful but demands work from adopters: someone must write the schemas and rules.
 - Small team and foundation vs hyperscaler distribution.
 

@@ -317,7 +317,7 @@
       <a class="url" style="color:var(--purple)" href="https://verana.io" target="_blank" rel="noopener">verana.io</a>
     </div>
   </div>
-<aside class="notes">Open on the announced question and promise an answer in three parts: what agent identity must prove, why the obvious central fix fails on privacy, and how Verifiable Trust does it in a decentralized way. 90-minute plan: Fabrice slides 1 to 10 (about 35 min), checkpoint questions, Ariel demo plus slide 11 (about 15 min), Fabrice slides 12 and 13, then open discussion.</aside></section>
+<aside class="notes">Open on the announced question and promise an answer in three parts: what agent identity must prove, why the obvious central fix fails on privacy, and how Verifiable Trust does it in a decentralized way. 90-minute plan: Fabrice slides 1 to 12 (about 40 min), checkpoint questions, Ariel demo plus slide 13 (about 15 min), Fabrice slides 14 and 15, then open discussion.</aside></section>
 
 <section class="slide" data-id="agents-act"><div class="eyebrow">The Agentic Inflection</div>
   <h1>AI agents already act on our behalf.<br><span class="g">None of them can prove who they are.</span></h1>
@@ -404,9 +404,22 @@
     </div>
     <div class="src" style="margin-top:18px">Open source, Apache 2.0 · Specification: <a class="url" href="https://verana-labs.github.io/verifiable-trust-spec/" target="_blank" rel="noopener">verana-labs.github.io/verifiable-trust-spec</a></div>
   </div>
-<aside class="notes">The one-layer thesis lands here: this is that layer. Three parts: ecosystems define the rules, verifiable trust proves compliance peer to peer, the trust graph makes trust discoverable. Everything is specified in the open.</aside></section>
+<aside class="notes">The one-layer thesis lands here: this is that layer. Three parts: ecosystems define the rules, verifiable trust proves compliance peer to peer, the trust graph makes trust discoverable. The next three slides take the parts one by one. Everything is specified in the open.</aside></section>
 
-<section class="slide" data-id="resolution"><div class="eyebrow">Mechanism</div>
+<section class="slide" data-id="ecosystems"><div class="eyebrow">01 · Trust Ecosystems</div>
+  <h1>Ecosystems make trust <span class="g">governable.</span></h1>
+  <div class="body">
+    <p class="kicker" style="font-size:17px;max-width:980px;margin-top:0">An ecosystem is a community that defines what trust means in its domain: which credentials exist, who may issue or verify them, under which governance. <strong>Anyone can found one:</strong> a sector body, a company network, a government program.</p>
+    <div class="cards c3" style="margin-top:26px">
+      <div class="card"><span class="tag purple">Governance Framework</span><h3>Rules, published</h3><p>The Ecosystem Governance Framework is anchored to the ecosystem DID: versioned, resolvable, public.</p></div>
+      <div class="card"><span class="tag purple">Credential Schemas</span><h3>Data models</h3><p>JSON Schemas anchored on the public registry: what each credential type must contain.</p></div>
+      <div class="card"><span class="tag purple">Permissions</span><h3>Who may do what</h3><p>Issue and verify rights per schema: granted, delegated and revoked in public, so anyone can check them.</p></div>
+    </div>
+    <div class="closer">Governance becomes data: <span class="g">published, resolvable, enforceable.</span></div>
+  </div>
+<aside class="notes">First pillar, one level deeper than the triad: an ecosystem is governance made operational. The three artifacts to name: the governance framework anchored to the ecosystem DID, the credential schemas, and the permission tree that says who may issue and who may verify each schema, with delegation and revocation happening in public. Stress the founding point: ecosystems are permissionless to create, which is how sector rules stay sector-owned on shared infrastructure.</aside></section>
+
+<section class="slide" data-id="resolution"><div class="eyebrow">02 · Verifiable Trust</div>
   <h1>Trust resolution runs on the client. <span class="g">Nobody watches you verify.</span></h1>
   <div class="body">
     <div class="cards c4" style="margin-top:8px">
@@ -420,6 +433,24 @@
     <div class="closer">Trust becomes a <span class="g">local computation</span> over public models.</div>
   </div>
 <aside class="notes">The step that matters for this audience is what is absent: no phone home. Contrast with certificate revocation checks and platform APIs that leak who is verifying whom. Stress that Proof-of-Trust is mutual: the service verifies the user agent exactly as the user agent verifies the service, before the connection is accepted; private credentials, if any, are exchanged only after the trusted channel exists, while Proof-of-Trust itself uses public ones. All inputs are either public (registry, schemas, permissions) or presented by the counterparty; each side computes its decision locally. This is the direct answer to the trap slide's linking and detecting threats.</aside></section>
+
+<section class="slide" data-id="trustgraph"><div class="eyebrow">03 · Trust Graph</div>
+  <h1>Trust, once proven, becomes <span class="g">searchable.</span></h1>
+  <div class="body">
+    <p class="kicker" style="font-size:17px;max-width:980px;margin-top:0">Every DID, credential, permission and ecosystem anchored on the registry forms a public graph. Query it like the web, <strong>ranked by verifiable trust instead of SEO</strong>.</p>
+    <div class="cards c3" style="margin-top:24px">
+      <div class="card"><span class="tag">Query by proof</span><p>Find services and agents by the credentials they hold, and by who accredited them.</p></div>
+      <div class="card"><span class="tag">Ranked by trust</span><p>Results ranked by verifiable trust signals from the graph, not by popularity or ad spend.</p></div>
+      <div class="card"><span class="tag">For humans and machines</span><p>APIs and MCP: agents resolve and choose counterparties before connecting.</p></div>
+    </div>
+    <div class="chips" style="margin-top:22px">
+      <span class="chip mono">Which ecosystems issue an ISO 42001 credential?</span>
+      <span class="chip mono">Which services hold ECS-Service from the Health Ecosystem?</span>
+      <span class="chip mono purple">Which agents may verify Payment Mandate credentials?</span>
+    </div>
+    <div class="closer">Discovery is the demand side of trust: <span class="g">it is why ecosystems compound.</span></div>
+  </div>
+<aside class="notes">Third pillar: the graph is what makes proven trust useful beyond one connection. The example queries are real playground vocabulary; the purple one links forward to the agent Proof-of-Trust card a few slides ahead, where exactly that verifier accreditation appears. Anti-SEO point lands well here: today discovery is rented from platforms and search ranking; in the trust graph it is earned through verifiable accreditations.</aside></section>
 
 <section class="slide" data-id="pbd"><div class="eyebrow">Privacy Engineering</div>
   <h1>Privacy by design, <span class="g">applied to trust itself.</span></h1>
@@ -437,7 +468,7 @@
 <section class="slide" data-id="models"><div class="eyebrow">Models As Universal Language</div>
   <h1>Ecosystem governance is a <span class="g">machine-readable model.</span></h1>
   <div class="body">
-    <p class="kicker" style="font-size:17px;max-width:960px">This group's founding idea, models as the shared language of privacy engineering, is exactly how Verana encodes trust.</p>
+    <p class="kicker" style="font-size:17px;max-width:960px">The three parts you just saw are all the same thing underneath: models. This group's founding idea, models as the shared language of privacy engineering, is exactly how Verana encodes trust.</p>
     <table class="tbl" style="margin-top:20px">
       <tr><th style="width:280px">Governance artifact</th><th>As a model</th></tr>
       <tr><td class="k">Ecosystem Governance Framework</td><td>Resolvable governance document, anchored to the ecosystem DID and versioned.</td></tr>

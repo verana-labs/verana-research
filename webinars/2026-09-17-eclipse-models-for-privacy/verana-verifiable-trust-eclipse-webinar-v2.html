@@ -317,7 +317,7 @@
       <a class="url" style="color:var(--purple)" href="https://verana.io" target="_blank" rel="noopener">verana.io</a>
     </div>
   </div>
-<aside class="notes">Open on the announced question and promise an answer in three parts: what agent identity must prove, why the obvious central fix fails on privacy, and how Verifiable Trust does it in a decentralized way. 90-minute plan: Fabrice slides 1 to 10 (about 35 min), checkpoint questions, Ariel demo plus slide 11 (about 15 min), Fabrice slides 12 and 13, then open discussion.</aside></section>
+<aside class="notes">Open on the announced question and promise an answer in three parts: what agent identity must prove, why the obvious central fix fails on privacy, and how Verifiable Trust does it in a decentralized way. 90-minute plan: Fabrice slides 1 to 12 (about 40 min), checkpoint questions, Ariel demo plus slide 13 (about 15 min), Fabrice slides 14 and 15, then open discussion.</aside></section>
 
 <section class="slide" data-id="agents-act"><div class="eyebrow">The Agentic Inflection</div>
   <h1>AI agents already act on our behalf.<br><span class="g">None of them can prove who they are.</span></h1>
@@ -526,7 +526,53 @@
   </div>
 <aside class="notes">The one-layer thesis lands here: this is that layer, and the three parts form a cycle. Ecosystems govern what counts as proof; peers prove it to each other at connection time; the trust graph makes the results discoverable, which attracts the next participants into the ecosystems. Everything is specified in the open.</aside></section>
 
-<section class="slide" data-id="resolution"><div class="eyebrow">Mechanism</div>
+<section class="slide" data-id="ecosystems"><div class="eyebrow">01 · Trust Ecosystems</div>
+  <h1>Ecosystems make trust <span class="g">governable.</span></h1>
+  <div class="body">
+    <div style="display:flex;gap:44px;align-items:center">
+      <div style="flex:1;min-width:0">
+        <p class="kicker" style="font-size:17px;margin-top:0">An ecosystem is a community that defines what trust means in its domain. <strong>Anyone can found one:</strong> a sector body, a company network, a government program.</p>
+        <div style="display:flex;flex-direction:column;gap:10px;margin-top:20px">
+          <div style="border:1px solid var(--line);border-radius:10px;padding:11px 16px;background:var(--card)"><span class="idx">Governance Framework</span><p style="font-size:14px;color:var(--muted);line-height:1.45">Anchored to the ecosystem DID: versioned, resolvable, public.</p></div>
+          <div style="border:1px solid var(--line);border-radius:10px;padding:11px 16px;background:var(--card)"><span class="idx">Credential Schemas</span><p style="font-size:14px;color:var(--muted);line-height:1.45">JSON Schemas on the registry: what each credential must contain.</p></div>
+          <div style="border:1px solid var(--line);border-radius:10px;padding:11px 16px;background:var(--card)"><span class="idx">Permissions</span><p style="font-size:14px;color:var(--muted);line-height:1.45">Issue and verify rights per schema: granted, delegated, revoked in public.</p></div>
+        </div>
+        <div class="closer" style="font-size:17px">Governance becomes data: <span class="g">published, resolvable, enforceable.</span></div>
+      </div>
+      <svg width="540" height="344" viewBox="0 0 540 344" role="img" aria-label="A trust ecosystem permission tree: the Health Ecosystem defines two credential schemas; a Medical Board is accredited issuer of one, delegating to Regional Boards; accredited clinics are verifiers of the other. Every arrow is a public, revocable permission" style="flex:none">
+        <defs><marker id="eco-a" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L8 4 L0 8 z" fill="var(--purple)"/></marker></defs>
+        <rect x="150" y="6" width="240" height="52" rx="11" fill="var(--purple-soft)" stroke="var(--purple)" stroke-width="1.5"/>
+        <text x="270" y="28" text-anchor="middle" font-family="'Space Grotesk'" font-weight="600" font-size="14.5" fill="var(--ink)">Health Ecosystem</text>
+        <text x="270" y="46" text-anchor="middle" font-family="PlexMono" font-size="12" fill="var(--faint)">EGF · did:webvh:health.example</text>
+        <line x1="200" y1="58" x2="132" y2="112" stroke="var(--purple)" marker-end="url(#eco-a)"/>
+        <line x1="340" y1="58" x2="408" y2="112" stroke="var(--purple)" marker-end="url(#eco-a)"/>
+        <text x="270" y="94" text-anchor="middle" font-size="12" fill="var(--faint)" font-family="InterD">defines schemas</text>
+        <rect x="10" y="118" width="245" height="48" rx="10" fill="var(--card)" stroke="var(--line)"/>
+        <text x="132" y="138" text-anchor="middle" font-family="'Space Grotesk'" font-weight="600" font-size="13.5" fill="var(--ink)">Practitioner credential</text>
+        <text x="132" y="156" text-anchor="middle" font-family="PlexMono" font-size="12" fill="var(--faint)">SCHEMA · JSON</text>
+        <rect x="285" y="118" width="245" height="48" rx="10" fill="var(--card)" stroke="var(--line)"/>
+        <text x="408" y="138" text-anchor="middle" font-family="'Space Grotesk'" font-weight="600" font-size="13.5" fill="var(--ink)">Patient Consent credential</text>
+        <text x="408" y="156" text-anchor="middle" font-family="PlexMono" font-size="12" fill="var(--faint)">SCHEMA · JSON</text>
+        <line x1="132" y1="166" x2="132" y2="218" stroke="var(--purple)" marker-end="url(#eco-a)"/>
+        <text x="138" y="196" font-size="12" fill="var(--faint)" font-family="InterD">may issue</text>
+        <line x1="408" y1="166" x2="408" y2="218" stroke="var(--purple)" marker-end="url(#eco-a)"/>
+        <text x="414" y="196" font-size="12" fill="var(--faint)" font-family="InterD">may verify</text>
+        <rect x="22" y="224" width="220" height="56" rx="10" fill="var(--card)" stroke="var(--line)"/>
+        <text x="36" y="247" font-family="PlexMono" font-size="12" letter-spacing="1" fill="var(--purple)">ISSUER</text>
+        <text x="36" y="266" font-family="'Space Grotesk'" font-weight="600" font-size="13.5" fill="var(--ink)">Medical Board</text>
+        <rect x="298" y="224" width="220" height="56" rx="10" fill="var(--card)" stroke="var(--line)"/>
+        <text x="312" y="247" font-family="PlexMono" font-size="12" letter-spacing="1" fill="var(--purple)">VERIFIER</text>
+        <text x="312" y="266" font-family="'Space Grotesk'" font-weight="600" font-size="13.5" fill="var(--ink)">Accredited Clinics</text>
+        <path d="M132 280 v22 h96" fill="none" stroke="var(--purple)" stroke-dasharray="5 4" marker-end="url(#eco-a)"/>
+        <rect x="234" y="288" width="196" height="30" rx="8" fill="var(--card)" stroke="var(--line)"/>
+        <text x="248" y="308" font-family="PlexMono" font-size="12" fill="var(--muted)">DELEGATES · Regional Boards</text>
+        <text x="270" y="340" text-anchor="middle" font-size="12" fill="var(--green)" font-family="InterD">every arrow is a public, revocable permission</text>
+      </svg>
+    </div>
+  </div>
+<aside class="notes">First pillar, one level deeper than the triad: an ecosystem is governance made operational. Walk the tree: the ecosystem anchors its governance framework and defines schemas; permissions attach issuers and verifiers to each schema; the dashed arrow shows delegation, and everything on this picture is public and revocable on the registry. Stress the founding point: ecosystems are permissionless to create, which is how sector rules stay sector-owned on shared infrastructure.</aside></section>
+
+<section class="slide" data-id="resolution"><div class="eyebrow">02 · Verifiable Trust</div>
   <h1>Trust resolution runs on the client. <span class="g">Nobody watches you verify.</span></h1>
   <div class="body">
     <svg width="1112" height="336" viewBox="0 0 1112 336" role="img" aria-label="Mutual trust resolution between two peers, which can be user agents, services, AI agents or IoT devices: both resolve each other's DIDs and credentials, verify locally, check the other's permissions against public registry data, then connect; no issuer or broker learns of the checks" style="margin-top:4px">
@@ -570,6 +616,49 @@
   </div>
 <aside class="notes">Walk the sequence and stress that Proof-of-Trust is mutual: peer B verifies peer A exactly as peer A verifies peer B; resolve each other, verify locally on both sides, each checks the other's permissions against public replicated state, then connect; once the trusted channel exists, peers can optionally exchange private credentials over it (Proof-of-Trust itself uses only public ones). The crossed-out eye is the point for this audience: unlike OCSP checks or platform trust APIs, no third party learns who verified whom, or when. All inputs are public or peer-presented, so each verdict is a local computation, which is the direct answer to the trap slide's linking and detecting threats.</aside></section>
 
+<section class="slide" data-id="trustgraph"><div class="eyebrow">03 · Trust Graph</div>
+  <h1>Trust, once proven, becomes <span class="g">searchable.</span></h1>
+  <div class="body">
+    <div style="display:flex;gap:44px;align-items:center">
+      <div style="flex:1;min-width:0">
+        <p class="kicker" style="font-size:17px;margin-top:0">Every DID, credential, permission and ecosystem on the registry forms a public graph, <strong>ranked by verifiable trust instead of SEO</strong>.</p>
+        <div style="display:flex;flex-direction:column;gap:10px;margin-top:20px">
+          <div style="border:1px solid var(--line);border-radius:10px;padding:11px 16px;background:var(--card)"><span class="idx">Query by proof</span><p style="font-size:14px;color:var(--muted);line-height:1.45">Find services and agents by credentials held and who accredited them.</p></div>
+          <div style="border:1px solid var(--line);border-radius:10px;padding:11px 16px;background:var(--card)"><span class="idx">Ranked by trust</span><p style="font-size:14px;color:var(--muted);line-height:1.45">Verifiable trust signals from the graph, not popularity or ad spend.</p></div>
+          <div style="border:1px solid var(--line);border-radius:10px;padding:11px 16px;background:var(--card)"><span class="idx">For humans and machines</span><p style="font-size:14px;color:var(--muted);line-height:1.45">APIs and MCP: agents resolve and choose counterparties before connecting.</p></div>
+        </div>
+        <div class="closer" style="font-size:17px">Discovery is the demand side of trust: <span class="g">it is why ecosystems compound.</span></div>
+      </div>
+      <svg width="540" height="344" viewBox="0 0 540 344" role="img" aria-label="A trust graph query: which agents may verify Payment Mandate credentials? The graph of ecosystems, schemas and agents is traversed along accreditation edges to one trust-ranked answer" style="flex:none">
+        <defs><marker id="tg-a" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L8 4 L0 8 z" fill="var(--faint)"/></marker><marker id="tg-g" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="8" markerHeight="8" orient="auto"><path d="M0 0 L8 4 L0 8 z" fill="var(--green)"/></marker></defs>
+        <rect x="10" y="6" width="520" height="40" rx="10" fill="var(--surface)" stroke="var(--purple)" stroke-width="1.3"/>
+        <text x="28" y="31" font-family="PlexMono" font-size="12" fill="var(--purple)">&gt; which agents may verify Payment Mandate credentials?</text>
+        <rect x="180" y="76" width="200" height="46" rx="10" fill="var(--purple-soft)" stroke="var(--purple)" stroke-width="1.4"/>
+        <text x="280" y="95" text-anchor="middle" font-family="'Space Grotesk'" font-weight="600" font-size="13.5" fill="var(--ink)">Payments Ecosystem</text>
+        <text x="280" y="112" text-anchor="middle" font-family="PlexMono" font-size="12" fill="var(--faint)">EGF · PERMISSIONS</text>
+        <rect x="30" y="170" width="210" height="42" rx="10" fill="var(--card)" stroke="var(--line)"/>
+        <text x="135" y="188" text-anchor="middle" font-family="'Space Grotesk'" font-weight="600" font-size="13" fill="var(--ink)">Payment Mandate</text>
+        <text x="135" y="204" text-anchor="middle" font-family="PlexMono" font-size="12" fill="var(--faint)">SCHEMA</text>
+        <line x1="238" y1="122" x2="160" y2="166" stroke="var(--faint)" marker-end="url(#tg-a)"/>
+        <text x="152" y="142" font-size="12" fill="var(--faint)" font-family="InterD">defines</text>
+        <rect x="300" y="238" width="230" height="52" rx="10" fill="var(--green-soft)" stroke="var(--green)" stroke-width="1.4"/>
+        <text x="316" y="259" font-family="PlexMono" font-size="12" letter-spacing="1" fill="var(--green)">VERIFIER · ACCREDITED</text>
+        <text x="316" y="278" font-family="'Space Grotesk'" font-weight="600" font-size="13.5" fill="var(--ink)">Acme Support Agent</text>
+        <line x1="320" y1="122" x2="400" y2="234" stroke="var(--green)" stroke-width="1.6" marker-end="url(#tg-g)"/>
+        <text x="392" y="178" font-size="12" fill="var(--green)" font-family="InterD">accredits verifier</text>
+        <circle cx="80" cy="270" r="15" fill="var(--card)" stroke="var(--line)"/>
+        <circle cx="150" cy="292" r="15" fill="var(--card)" stroke="var(--line)"/>
+        <circle cx="222" cy="272" r="15" fill="var(--card)" stroke="var(--line)"/>
+        <line x1="238" y1="122" x2="92" y2="258" stroke="var(--line)" marker-end="url(#tg-a)"/>
+        <line x1="280" y1="122" x2="228" y2="256" stroke="var(--line)" marker-end="url(#tg-a)"/>
+        <text x="150" y="330" text-anchor="middle" font-size="12" fill="var(--faint)" font-family="InterD">holders and other participants</text>
+        <rect x="330" y="308" width="170" height="26" rx="13" fill="var(--green-soft)" stroke="var(--green-line)"/>
+        <text x="415" y="325" text-anchor="middle" font-family="PlexMono" font-size="12" fill="var(--green)">1 RESULT · TRUST-RANKED</text>
+      </svg>
+    </div>
+  </div>
+<aside class="notes">Third pillar: the graph is what makes proven trust useful beyond one connection. Walk the query: it enters at the Payments Ecosystem, follows the public permission that accredits a verifier for the Payment Mandate schema, and returns one trust-ranked answer, the same agent whose Proof-of-Trust card appears two slides ahead. Anti-SEO point lands well here: today discovery is rented from platforms and ranking; in the trust graph it is earned through verifiable accreditations. Mention MCP: agents run these queries themselves.</aside></section>
+
 <section class="slide" data-id="pbd"><div class="eyebrow">Privacy Engineering</div>
   <h1>Privacy by design, <span class="g">applied to trust itself.</span></h1>
   <div class="body">
@@ -586,7 +675,7 @@
 <section class="slide" data-id="models"><div class="eyebrow">Models As Universal Language</div>
   <h1>Ecosystem governance is a <span class="g">machine-readable model.</span></h1>
   <div class="body">
-    <p class="kicker" style="font-size:17px;max-width:960px">This group's founding idea, models as the shared language of privacy engineering, is exactly how Verana encodes trust.</p>
+    <p class="kicker" style="font-size:17px;max-width:960px">The three parts you just saw are all the same thing underneath: models. This group's founding idea, models as the shared language of privacy engineering, is exactly how Verana encodes trust.</p>
     <table class="tbl" style="margin-top:20px">
       <tr><th style="width:280px">Governance artifact</th><th>As a model</th></tr>
       <tr><td class="k">Ecosystem Governance Framework</td><td>Resolvable governance document, anchored to the ecosystem DID and versioned.</td></tr>

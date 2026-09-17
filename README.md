@@ -6,6 +6,7 @@ Research, papers, talks and webinar materials from [The Verana Foundation](https
 
 | Date | Title | Type |
 |---|---|---|
+| 2026-09 | [The Agent Identity Landscape, September 2026](papers/agent-identity-landscape-2026/landscape-paper.md) ([HTML](papers/agent-identity-landscape-2026/landscape-paper.html)) · a comparative analysis of trust approaches for autonomous actors (draft v0.1) | Paper |
 | 2026-09-17 | [Why AI Agents Must Have Their Own Identity?](webinars/2026-09-17-eclipse-models-for-privacy/) · Eclipse Models for Privacy webinar, with the companion [agent-identity landscape notes](webinars/2026-09-17-eclipse-models-for-privacy/landscape.md) | Webinar |
 
 ## Layout

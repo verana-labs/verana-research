@@ -10,7 +10,7 @@ The talk argues that AI agents need their own verifiable identity, proving three
 
 | File | Description |
 |---|---|
-| [verana-verifiable-trust-eclipse-webinar-v3.html](verana-verifiable-trust-eclipse-webinar-v3.html) | **Latest cut** (16 slides): illustrated, deduplicated, with the three-pillar section |
+| [verana-verifiable-trust-eclipse-webinar-v4.html](verana-verifiable-trust-eclipse-webinar-v4.html) | **Latest cut** (17 slides): the causal "How It Works" arc: ecosystems, create or join, get accredited, attach publicly, verify before connecting, trust graph |
 | [verana-verifiable-trust-eclipse-webinar-v2.html](verana-verifiable-trust-eclipse-webinar-v2.html) | Illustrated version: diagram treatments of the answer, trap, one-layer, pillar and mechanism slides |
 | [verana-verifiable-trust-eclipse-webinar.html](verana-verifiable-trust-eclipse-webinar.html) | Text-first version of the deck |
 | [landscape.md](landscape.md) | Companion notes: the agent-identity landscape, one section per approach with pros, cons and how it relates to Verana |

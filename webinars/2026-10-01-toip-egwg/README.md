@@ -8,11 +8,10 @@ Talk given at the **Trust over IP Foundation, Ecosystem & Governance Working Gro
 
 ## Files
 
-- `verana-governance-toip-egwg-v2.html`: the slide deck as presented (v2, 18 slides). Part one explains what Verana is with the three verana.io bricks (ecosystems, identity, discovery) and a one-slide summary illustrated by a live Proof of Trust; part two covers governance: the two entities, the layered model, then the Network Governance Framework chapter by chapter.
+- `verana-governance-toip-egwg-v2.html`: the slide deck as presented (18 slides). Part one explains what Verana is with the three verana.io bricks (ecosystems, identity, discovery) and a one-slide summary illustrated by a live Proof of Trust; part two covers governance: the two entities, the layered model, then the Network Governance Framework chapter by chapter.
 - `verana-governance-toip-egwg-v2.pdf`: the same deck as a 16:9 PDF, one slide per page.
-- `verana-governance-toip-egwg-v1.html`: the first cut (16 slides), kept for reference.
 
-Open either file in a browser; arrow keys or space to navigate, `N` toggles speaker notes, `D` toggles dark/light, `F` fullscreen. Print to PDF gives one slide per page.
+Open the HTML file in a browser; arrow keys or space to navigate, `N` toggles speaker notes, `D` toggles dark/light, `F` fullscreen. Print to PDF gives one slide per page.
 
 ## What the talk covers
 
